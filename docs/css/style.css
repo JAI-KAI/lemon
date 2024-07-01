@@ -511,25 +511,28 @@ footer .inner .item .right .line {
   overflow: hidden;
   z-index: 0;
 }
-footer .inner .item .right .line > div {
+footer .inner .item .right .line .lineqr {
+  width: 100%;
+}
+footer .inner .item .right .line > div:nth-child(2) {
   text-align: start;
 }
-footer .inner .item .right .line > div > div {
+footer .inner .item .right .line > div:nth-child(2) > div {
   font-weight: bold;
 }
-footer .inner .item .right .line > div > div:nth-child(1) {
+footer .inner .item .right .line > div:nth-child(2) > div:nth-child(1) {
   font-size: 1.46vw;
   font-weight: 900;
   letter-spacing: 5px;
   font-family: "Noto Serif TC";
   color: #709339;
 }
-footer .inner .item .right .line > div > div:nth-child(2) {
+footer .inner .item .right .line > div:nth-child(2) > div:nth-child(2) {
   font-size: 18px;
   padding-top: 10px;
   padding-bottom: 20px;
 }
-footer .inner .item .right .line > div > div:nth-child(3) {
+footer .inner .item .right .line > div:nth-child(2) > div:nth-child(3) {
   font-size: 36px;
   font-family: "Noto Serif TC";
   color: #709339;
