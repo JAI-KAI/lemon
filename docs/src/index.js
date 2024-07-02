@@ -36,7 +36,8 @@ import SimpleParallax from "simple-parallax-js/vanilla";
         slides[slideIndex-1].style.display = 'block';
         dots[slideIndex-1].style.backgroundColor = '#709339';
     }
-    setInterval(showSlides, autoSlideInterval);
+    // setInterval(showSlides, autoSlideInterval);
+
 
     function pauseSlideshow() {
         if(isPaused) return;

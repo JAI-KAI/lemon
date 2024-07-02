@@ -9,6 +9,6 @@
   },
   "scripts": {
     "start": "webpack serve --open",
-    "build": "webpack --mode development"
+    "build": "webpack --watch"
   }
 }
