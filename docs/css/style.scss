@@ -89,8 +89,15 @@ header {
     > .inner{
         display: flex;
         justify-content: space-between;
+        position: relative;
         align-items: center;
         padding: 0px 165px;
+        .logo{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 3px;
+        }
         > .left{
             display: flex;
             width: 40%;
@@ -102,12 +109,6 @@ header {
             width: 40%;
             justify-content: space-around;
         }
-    }
-    .logo{
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        top: 3px;
     }
     .phone{
         color: white;
@@ -559,6 +560,195 @@ footer{
             font-size: 14px;
             letter-spacing: 1.5px;
             padding-top: 20px;
+        }
+    }
+}
+
+//mobile
+.mobile{
+    display: none;
+}
+
+@media (max-width: 768px){
+    header{
+        background-color: white;
+        padding: 5px 0;
+        .inner{
+            display: none;
+        }
+        .mobile{
+            display: block;
+            .nav{
+                position: relative;
+                display: flex;
+                justify-content: flex-end;
+                .logo{
+                    position: absolute;
+                    left: 15px;
+                    top: 0;
+                    img{
+                        max-width: 70%;
+                        width: 174px;
+                    }
+                }
+                #openbtn{
+                    width: 60px;
+                    height: 60px;
+                    margin-right: 10px;
+                    text-align: center;
+                    display: flex;
+                    align-items: center;
+                    button{
+                        font-size: 36px;
+                        width: 100%;
+                        color: #709339;
+                    }
+                }
+            }
+            .content{
+                position: fixed;
+                top: 0;
+                left: 100%;
+                width: 100%;
+                height: 100%;
+                overflow-y: auto;
+                z-index: 999;
+                transition: all .3s ease-out;
+                .head{
+                    display: flex;
+                    justify-content: flex-end;
+                    margin-bottom: 40px;
+                    .close{
+                        font-size: 36px;
+                        color: white;
+                    }
+                }
+                .collapseBox{
+                    overflow-y: scroll;
+                    background-color: rgba(112, 147, 57, .95);
+                    color: white;
+                    margin: 15px;
+                    padding: 20px 30px 30px;
+                    height: calc(100% - 30px);
+                    .search{
+                        padding: 0 25px;
+                        margin-bottom: 25px;
+                        border-radius: 25px;
+                        border: 1px solid white;
+                        .inputitem{
+                            display: flex;
+                            align-items: center;
+                            width: 100%;
+                            .icon{
+                                font-size: 24px;
+                            }
+                            input{
+                                flex: 1 1 auto;
+                                margin: 0 10px;
+                                height: 48px;
+                                font-size: max(16px,1.56vw);
+                                font-weight: 400;
+                                line-height: 48px;
+                                max-height: 100%;
+                                color: #fff;
+                                background-color: transparent;
+                                box-shadow: none;
+                                border: none;
+                                outline: none
+                            }
+                            .go{
+                                padding: 0;
+                                color: #fff;
+                                letter-spacing: 1px;
+                                font-family: Microsoft JhengHei, Arial, Helvetica, sans-serif;
+                                font-weight: 700;
+                                font-size: max(16px,1.76vw);
+                            }
+                        }
+                        
+                    }
+                    #main-menu{
+                        margin-bottom: 100px;
+                        >li{
+                            position: relative;
+                            a{  
+                                display: block;
+                                padding: 30px 20px;
+                                margin: 0 auto;
+                                line-height: 17px;
+                                width: fit-content;
+                                font-size: max(16px,1.76vw);
+                                font-weight: 700;
+                                #onMenu{
+                                    color: #fff;
+                                }
+                            }
+                            &::after{
+                                content: "";
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 1px;
+                                background: linear-gradient(90deg, transparent 30%, #fff 0);
+                                background-size: 8px;
+                            }
+                        }
+                        .menuaria{
+                            overflow-y: hidden;
+                            max-height: 77px;
+                            transition: all .3s ease-out;
+                        }
+                        .isOpen{
+                            max-height: 309px;
+                        }
+                        #menuCollapse{
+                            >li{
+                                a{
+                                    font-weight: 400;
+                                    color: #ecf7dc;;
+                                }
+                            }
+                        }
+                    }
+                }
+                #inquiry_area{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #ebd412;
+                    color: #333;
+                    height: 50px;
+                    border-radius: 25px;
+                    margin-bottom: 50px;
+                    font-weight: 400;
+                    font-size: max(14px,1.56vw);
+                    margin-bottom: 50px;
+                    .text{
+                        margin-left: 15px;
+                        letter-spacing: 2.5px;
+                    }
+                }
+                .sociallink{
+                    display: flex;
+                    justify-content: center;
+                    li{
+                        margin: 0 14px 20px;;
+                        a{
+                            width: 45px;
+                            height: 45px;
+                            border: 1px solid #fff;
+                            border-radius: 50%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            color: #fff;
+                            padding: 3px;
+                            font-size: max(18px,2.34vw);
+                        }
+                    }
+                }
+            }
         }
     }
 }

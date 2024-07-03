@@ -36,7 +36,7 @@ import SimpleParallax from "simple-parallax-js/vanilla";
         slides[slideIndex-1].style.display = 'block';
         dots[slideIndex-1].style.backgroundColor = '#709339';
     }
-    // setInterval(showSlides, autoSlideInterval);
+    setInterval(showSlides, autoSlideInterval);
 
 
     function pauseSlideshow() {
@@ -64,3 +64,25 @@ import SimpleParallax from "simple-parallax-js/vanilla";
     //SimpleParallax
     var image = document.getElementsByClassName('thumbnail');
     new SimpleParallax(image);
+
+    //mobile
+
+    var openbtn = document.getElementById('openbtn');
+    var content = document.getElementById('content');
+    var close = document.getElementById('close');
+    var onMenu = document.getElementById('onMenu');
+    var menuaria = document.getElementById('menuaria');
+
+    openbtn.onclick = () => {
+        content.style.left = '0%';
+    }
+    close.onclick = () => {
+        content.style.left = '100%';
+        if(content.style.left == '100%'){
+            menuaria.classList.remove("isOpen");
+        }
+    }
+    onMenu.onclick = (e) => {
+        e.preventDefault();
+        menuaria.classList.toggle("isOpen");
+    }
