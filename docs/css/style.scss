@@ -67,6 +67,7 @@ button{
     cursor: pointer;
     transition: all .2s ease-out;
     opacity: 0;
+    z-index: 999;
     &:hover{
         bottom: 9rem;
     }
@@ -434,12 +435,12 @@ header {
     margin-top: 150px;
     .inner{
         position: relative;
+        padding: 0px 80px;
         >div:nth-child(1){
-            padding: 0px 80px;
+            overflow: hidden;
+            border-radius: 50px;     
+            height: 700px;
             >div{
-                border-radius: 50px;
-                overflow: hidden;
-                height: 700px;
                 img{
                     max-width: 100%;
                     height: auto;
@@ -458,16 +459,18 @@ header {
 footer{
     letter-spacing: 1px;
     .inner{
-        padding: 100px 150px;
+        padding: 0 15px;
+        margin: 7.5rem auto;
+        max-width: 1620px;
         line-height: 30px;
         .item{
             display: flex;
             justify-content: space-between;
             align-items: center;
             .left{
-                flex: 70%;
-                max-width: 70%;
-                padding-right: 150px;
+                flex: 0 0 66.6666667%;
+                max-width: 66.6666667%;
+                padding-right: 115px;
                 .company{
                     letter-spacing: 1.5px;
                     font-size: max(18px,1.15vw);
@@ -502,20 +505,29 @@ footer{
                 }
             }
             .right{
-                flex:30%;
+                flex: 0 0 33.3333333%;
+                max-width: 33.3333333%;
                 text-align: center;
                 .line{
                     display: flex;
+                    flex-wrap: wrap;
                     align-items: center;
                     position: relative;
-                    padding-right: 50px;
                     border-radius: 25px;
                     border: 1px solid #ebd412;
                     background-color: white;
                     overflow: hidden;
                     z-index: 0;
+                    .qr{
+                        width: 50%;
+                    }
+                    .text{
+                        width: 50%;
+                    }
                     .lineqr{
-                        width: 100%;
+                        width: 249px;
+                        max-width: 100%;
+                        height: auto;
                     }
                     >div{
                         &:nth-child(2){
@@ -526,18 +538,19 @@ footer{
                                 font-size: max(20px,1.46vw);
                                 font-weight: 900;
                                 letter-spacing: 5px;
+                                margin-bottom: 3px;
                                 font-family: 'Noto Serif TC';
                                 color: #709339;
                             }
                             &:nth-child(2){
                                 font-size: max(16px,.94vw);
-                                padding-top: 10px;
-                                padding-bottom: 20px;
+                                font-weight: 700;
                             }
                             &:nth-child(3){
                                 font-size: max(22px,1.88vw);
                                 font-family: 'Noto Serif TC';
                                 color: #709339;
+                                margin-top: 7px;
                             }
                         }  
                         }
@@ -770,6 +783,11 @@ footer{
         }
     }
     .products{
+        .inner{
+            max-width: 90%;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
         .card > ul{
             flex-wrap: wrap;
             justify-content: center;
@@ -820,17 +838,19 @@ footer{
             padding: 0;
             >div:nth-child(1){
                 padding: 0;
+                height: 25rem;
+                border-radius: 0px;    
                 >div{
                     border-radius: 0;
-                    height: 33rem;
+                    
                     img{
-                        max-width: 135%;
-                        transform: translate(-25%, -150px);
+                        max-width: 200%;
+                        transform: translateX(-45%);
                     }
                 }
             }
             .textimg{
-                right: 5rem;
+                right: 2rem;
                 bottom: 2rem;
                 top: unset;
                 img{
@@ -850,8 +870,27 @@ footer{
                 flex-wrap: wrap;
                 .right{
                     flex: 0 0 100%;
-                    max-width: 75%;
+                    max-width: 100%;
                     margin: 3rem auto;
+                    .line{
+                        padding: 0;
+                        margin: 0 auto;
+                       .qr{
+                        width: 45%;
+                        .lineqr{
+                            width: 100%;
+                            max-width: 100%;
+                            height: auto;
+                        }
+                    }
+                    .text{
+                        width: 55%;
+                        padding-right: 10px;
+                        >div{
+                            padding: 0 !important; 
+                        }
+                    } 
+                    } 
                 }
                 .left{
                     flex: 0 0 100%;
@@ -859,8 +898,9 @@ footer{
                     padding: 0;
                     .contact{
                         max-width: 100%;
+                        flex-wrap: wrap;
                         div{
-                            width: 50%;
+                            width: 100%;
                             margin-bottom: 20px;
                             line-height:1.5;
                         }

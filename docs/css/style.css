@@ -72,6 +72,7 @@ button {
   cursor: pointer;
   transition: all 0.2s ease-out;
   opacity: 0;
+  z-index: 999;
 }
 #goTop:hover {
   bottom: 9rem;
@@ -432,13 +433,11 @@ header .line {
 }
 .banner02 .inner {
   position: relative;
-}
-.banner02 .inner > div:nth-child(1) {
   padding: 0px 80px;
 }
-.banner02 .inner > div:nth-child(1) > div {
-  border-radius: 50px;
+.banner02 .inner > div:nth-child(1) {
   overflow: hidden;
+  border-radius: 50px;
   height: 700px;
 }
 .banner02 .inner > div:nth-child(1) > div img {
@@ -457,7 +456,9 @@ footer {
   letter-spacing: 1px;
 }
 footer .inner {
-  padding: 100px 150px;
+  padding: 0 15px;
+  margin: 7.5rem auto;
+  max-width: 1620px;
   line-height: 30px;
 }
 footer .inner .item {
@@ -466,9 +467,9 @@ footer .inner .item {
   align-items: center;
 }
 footer .inner .item .left {
-  flex: 70%;
-  max-width: 70%;
-  padding-right: 150px;
+  flex: 0 0 66.6666667%;
+  max-width: 66.6666667%;
+  padding-right: 115px;
 }
 footer .inner .item .left .company {
   letter-spacing: 1.5px;
@@ -503,22 +504,31 @@ footer .inner .item .left .media .social a:nth-child(2) {
   margin-left: 60px;
 }
 footer .inner .item .right {
-  flex: 30%;
+  flex: 0 0 33.3333333%;
+  max-width: 33.3333333%;
   text-align: center;
 }
 footer .inner .item .right .line {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   position: relative;
-  padding-right: 50px;
   border-radius: 25px;
   border: 1px solid #ebd412;
   background-color: white;
   overflow: hidden;
   z-index: 0;
 }
+footer .inner .item .right .line .qr {
+  width: 50%;
+}
+footer .inner .item .right .line .text {
+  width: 50%;
+}
 footer .inner .item .right .line .lineqr {
-  width: 100%;
+  width: 249px;
+  max-width: 100%;
+  height: auto;
 }
 footer .inner .item .right .line > div:nth-child(2) {
   text-align: start;
@@ -530,18 +540,19 @@ footer .inner .item .right .line > div:nth-child(2) > div:nth-child(1) {
   font-size: max(20px, 1.46vw);
   font-weight: 900;
   letter-spacing: 5px;
+  margin-bottom: 3px;
   font-family: "Noto Serif TC";
   color: #709339;
 }
 footer .inner .item .right .line > div:nth-child(2) > div:nth-child(2) {
   font-size: max(16px, 0.94vw);
-  padding-top: 10px;
-  padding-bottom: 20px;
+  font-weight: 700;
 }
 footer .inner .item .right .line > div:nth-child(2) > div:nth-child(3) {
   font-size: max(22px, 1.88vw);
   font-family: "Noto Serif TC";
   color: #709339;
+  margin-top: 7px;
 }
 footer .inner .item .right .line .tw {
   position: absolute;
@@ -756,6 +767,11 @@ footer .bottom div {
   .banner .inner .dotbtn {
     display: none;
   }
+  .products .inner {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
   .products .card > ul {
     flex-wrap: wrap;
     justify-content: center;
@@ -802,17 +818,18 @@ footer .bottom div {
   }
   .banner02 .inner > div:nth-child(1) {
     padding: 0;
+    height: 25rem;
+    border-radius: 0px;
   }
   .banner02 .inner > div:nth-child(1) > div {
     border-radius: 0;
-    height: 33rem;
   }
   .banner02 .inner > div:nth-child(1) > div img {
-    max-width: 135%;
-    transform: translate(-25%, -150px);
+    max-width: 200%;
+    transform: translateX(-45%);
   }
   .banner02 .inner .textimg {
-    right: 5rem;
+    right: 2rem;
     bottom: 2rem;
     top: unset;
   }
@@ -831,8 +848,27 @@ footer .bottom div {
   }
   footer .inner .item .right {
     flex: 0 0 100%;
-    max-width: 75%;
+    max-width: 100%;
     margin: 3rem auto;
+  }
+  footer .inner .item .right .line {
+    padding: 0;
+    margin: 0 auto;
+  }
+  footer .inner .item .right .line .qr {
+    width: 45%;
+  }
+  footer .inner .item .right .line .qr .lineqr {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+  footer .inner .item .right .line .text {
+    width: 55%;
+    padding-right: 10px;
+  }
+  footer .inner .item .right .line .text > div {
+    padding: 0 !important;
   }
   footer .inner .item .left {
     flex: 0 0 100%;
@@ -841,9 +877,10 @@ footer .bottom div {
   }
   footer .inner .item .left .contact {
     max-width: 100%;
+    flex-wrap: wrap;
   }
   footer .inner .item .left .contact div {
-    width: 50%;
+    width: 100%;
     margin-bottom: 20px;
     line-height: 1.5;
   }
