@@ -5,7 +5,10 @@
 }
 
 body {
+  color: #333;
   background-image: url(../image/index/bg.png);
+  background-position: 50%;
+  background-color: rgba(171, 163, 134, 0.102);
   font-family: "Microsoft JhengHei";
   position: relative;
   z-index: -1;
@@ -378,7 +381,9 @@ header .line {
 .about .news {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-top: 200px;
+  padding: 0 50px;
 }
 .about .news .left {
   display: flex;
@@ -427,21 +432,20 @@ header .line {
 }
 .banner02 .inner {
   position: relative;
-  padding: 0px 80px;
 }
 .banner02 .inner > div:nth-child(1) {
+  padding: 0px 80px;
+}
+.banner02 .inner > div:nth-child(1) > div {
   border-radius: 50px;
   overflow: hidden;
   height: 700px;
-}
-.banner02 .inner > div:nth-child(1) > div {
-  transform: translate3d(0px, 0px, 0px) scale(1.1);
 }
 .banner02 .inner > div:nth-child(1) > div img {
   max-width: 100%;
   height: auto;
   position: relative;
-  bottom: 300px;
+  transform: translateY(-150px);
 }
 .banner02 .inner .textimg {
   position: absolute;
@@ -468,7 +472,7 @@ footer .inner .item .left {
 }
 footer .inner .item .left .company {
   letter-spacing: 1.5px;
-  font-size: 22px;
+  font-size: max(18px, 1.15vw);
   font-weight: bold;
 }
 footer .inner .item .left .contact {
@@ -477,6 +481,7 @@ footer .inner .item .left .contact {
   justify-content: space-between;
   padding: 30px 0;
   border-bottom: 1px dashed #817858;
+  font-size: max(14px, 0.83vw);
 }
 footer .inner .item .left .media {
   display: flex;
@@ -522,19 +527,19 @@ footer .inner .item .right .line > div:nth-child(2) > div {
   font-weight: bold;
 }
 footer .inner .item .right .line > div:nth-child(2) > div:nth-child(1) {
-  font-size: 1.46vw;
+  font-size: max(20px, 1.46vw);
   font-weight: 900;
   letter-spacing: 5px;
   font-family: "Noto Serif TC";
   color: #709339;
 }
 footer .inner .item .right .line > div:nth-child(2) > div:nth-child(2) {
-  font-size: 18px;
+  font-size: max(16px, 0.94vw);
   padding-top: 10px;
   padding-bottom: 20px;
 }
 footer .inner .item .right .line > div:nth-child(2) > div:nth-child(3) {
-  font-size: 36px;
+  font-size: max(22px, 1.88vw);
   font-family: "Noto Serif TC";
   color: #709339;
 }
@@ -546,13 +551,15 @@ footer .inner .item .right .line .tw {
 footer .bottom {
   height: 113px;
   background-image: url(../image/index/footer-bg.png);
+  background-position: 50%;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 footer .bottom div {
   color: #c7e0a0;
-  font-size: 14px;
+  font-size: max(13px, 0.37vw);
   letter-spacing: 1.5px;
   padding-top: 20px;
 }
@@ -565,6 +572,7 @@ footer .bottom div {
   header {
     background-color: white;
     padding: 5px 0;
+    box-shadow: 100px 0 5px #ddd;
   }
   header .inner {
     display: none;
@@ -737,5 +745,109 @@ footer .bottom div {
     color: #fff;
     padding: 3px;
     font-size: max(18px, 2.34vw);
+  }
+  .banner .inner {
+    padding: 0;
+  }
+  .banner .inner img {
+    border-radius: 0;
+    height: auto;
+  }
+  .banner .inner .dotbtn {
+    display: none;
+  }
+  .products .card > ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .products .card > ul li {
+    margin-top: 60px;
+  }
+  .products .moreline {
+    max-width: 85%;
+  }
+  .about .inner {
+    padding-top: 120px;
+  }
+  .about .inner .us {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .about .inner .us .right {
+    flex: 0 0 100%;
+    max-width: 100%;
+    order: 1;
+    margin-bottom: 48px;
+  }
+  .about .inner .us .left {
+    flex: 0 0 100%;
+    max-width: 100%;
+    order: 2;
+  }
+  .about .inner .news {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .about .inner .news .right {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 48px;
+  }
+  .about .inner .news .left {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .banner02 .inner {
+    padding: 0;
+  }
+  .banner02 .inner > div:nth-child(1) {
+    padding: 0;
+  }
+  .banner02 .inner > div:nth-child(1) > div {
+    border-radius: 0;
+    height: 33rem;
+  }
+  .banner02 .inner > div:nth-child(1) > div img {
+    max-width: 135%;
+    transform: translate(-25%, -150px);
+  }
+  .banner02 .inner .textimg {
+    right: 5rem;
+    bottom: 2rem;
+    top: unset;
+  }
+  .banner02 .inner .textimg img {
+    width: 12rem;
+  }
+  footer .inner {
+    max-width: 90%;
+    padding: 0 15px;
+    margin-top: 6rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  footer .inner .item {
+    flex-wrap: wrap;
+  }
+  footer .inner .item .right {
+    flex: 0 0 100%;
+    max-width: 75%;
+    margin: 3rem auto;
+  }
+  footer .inner .item .left {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 0;
+  }
+  footer .inner .item .left .contact {
+    max-width: 100%;
+  }
+  footer .inner .item .left .contact div {
+    width: 50%;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  footer .bottom {
+    height: 6rem;
   }
 }/*# sourceMappingURL=style.css.map */

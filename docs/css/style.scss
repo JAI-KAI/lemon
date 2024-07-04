@@ -5,7 +5,10 @@
 }
 
 body {
+    color: #333;
     background-image: url(../image/index/bg.png);
+    background-position: 50%;
+    background-color: rgba(171,163,134,.102);
     font-family: 'Microsoft JhengHei';
     position: relative;
     z-index: -1;
@@ -379,7 +382,9 @@ header {
     .news{
         display: flex;
         justify-content: space-between;
+        align-items: center;
         margin-top: 200px;
+        padding: 0 50px;
         .left{
             display: flex;
             flex: 64%;
@@ -429,20 +434,17 @@ header {
     margin-top: 150px;
     .inner{
         position: relative;
-        padding: 0px 80px;
         >div:nth-child(1){
-            border-radius: 50px;
-            overflow: hidden;
-            height: 700px;
+            padding: 0px 80px;
             >div{
-                transform: translate3d(0px, 0px, 0px) scale(1.1);
+                border-radius: 50px;
+                overflow: hidden;
+                height: 700px;
                 img{
                     max-width: 100%;
                     height: auto;
                     position: relative;
-                    bottom: 300px;
-                    // transform: translateY(-300px);
-                    // vertical-align: middle;
+                    transform: translateY(-150px);
                 }
             }
         }
@@ -468,7 +470,7 @@ footer{
                 padding-right: 150px;
                 .company{
                     letter-spacing: 1.5px;
-                    font-size: 22px;
+                    font-size: max(18px,1.15vw);
                     font-weight: bold;
                 }
                 .contact{
@@ -477,6 +479,7 @@ footer{
                     justify-content: space-between;
                     padding: 30px 0;
                     border-bottom: 1px dashed #817858;
+                    font-size: max(14px,.83vw);
                 }
                 .media{
                     display: flex;
@@ -520,19 +523,19 @@ footer{
                         >div{
                             font-weight: bold;
                             &:nth-child(1){
-                                font-size: 1.46vw;
+                                font-size: max(20px,1.46vw);
                                 font-weight: 900;
                                 letter-spacing: 5px;
                                 font-family: 'Noto Serif TC';
                                 color: #709339;
                             }
                             &:nth-child(2){
-                                font-size: 18px;
+                                font-size: max(16px,.94vw);
                                 padding-top: 10px;
                                 padding-bottom: 20px;
                             }
                             &:nth-child(3){
-                                font-size: 36px;
+                                font-size: max(22px,1.88vw);
                                 font-family: 'Noto Serif TC';
                                 color: #709339;
                             }
@@ -552,12 +555,14 @@ footer{
     .bottom{
         height: 113px;
         background-image: url(../image/index/footer-bg.png);
+        background-position: 50%;
+        background-size: cover;
         display: flex;
         justify-content: center;
         align-items: center;
         div{
             color: #c7e0a0;
-            font-size: 14px;
+            font-size: max(13px,.37vw);
             letter-spacing: 1.5px;
             padding-top: 20px;
         }
@@ -573,6 +578,7 @@ footer{
     header{
         background-color: white;
         padding: 5px 0;
+        box-shadow: 100px 0 5px #ddd;
         .inner{
             display: none;
         }
@@ -751,4 +757,120 @@ footer{
             }
         }
     }
+    .banner{
+        .inner{
+            padding: 0;
+            img{
+                border-radius: 0;
+                height: auto;
+            }
+            .dotbtn{
+                display: none;
+            }
+        }
+    }
+    .products{
+        .card > ul{
+            flex-wrap: wrap;
+            justify-content: center;
+            li{
+                margin-top: 60px;
+            }
+        }
+        .moreline{
+            max-width: 85%;
+        }
+    }
+    .about{
+        .inner{
+            padding-top: 120px;
+            .us{
+                flex-wrap: wrap;
+                justify-content: center;
+                .right{
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                    order: 1;
+                    margin-bottom: 48px;
+                }
+                .left{
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                    order: 2;
+                }
+            }
+
+            .news{
+                flex-wrap: wrap;
+                justify-content: center;
+                .right{
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                    margin-bottom: 48px;
+                }
+                .left{
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+    .banner02{
+        .inner{
+            padding: 0;
+            >div:nth-child(1){
+                padding: 0;
+                >div{
+                    border-radius: 0;
+                    height: 33rem;
+                    img{
+                        max-width: 135%;
+                        transform: translate(-25%, -150px);
+                    }
+                }
+            }
+            .textimg{
+                right: 5rem;
+                bottom: 2rem;
+                top: unset;
+                img{
+                    width: 12rem;
+                }
+            }
+        }
+    }
+    footer{
+        .inner{
+            max-width: 90%;
+            padding: 0 15px;
+            margin-top: 6rem;
+            margin-left: auto;
+            margin-right: auto;
+            .item{
+                flex-wrap: wrap;
+                .right{
+                    flex: 0 0 100%;
+                    max-width: 75%;
+                    margin: 3rem auto;
+                }
+                .left{
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                    padding: 0;
+                    .contact{
+                        max-width: 100%;
+                        div{
+                            width: 50%;
+                            margin-bottom: 20px;
+                            line-height:1.5;
+                        }
+                    }
+                }
+            }
+        }
+        .bottom{
+            height: 6rem;
+        }
+    } 
+    
 }

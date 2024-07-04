@@ -62,8 +62,10 @@ import SimpleParallax from "simple-parallax-js/vanilla";
     })
     
     //SimpleParallax
-    var image = document.getElementsByClassName('thumbnail');
-    new SimpleParallax(image);
+    // var simpleParallax = document.getElementById('simpleParallax');
+    // new SimpleParallax(simpleParallax,{
+    //     scale: 1.1
+    // });
 
     //mobile
 
