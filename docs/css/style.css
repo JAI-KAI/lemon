@@ -757,6 +757,9 @@ footer .bottom div {
     padding: 3px;
     font-size: max(18px, 2.34vw);
   }
+  .banner {
+    margin-top: 50px;
+  }
   .banner .inner {
     padding: 0;
   }
@@ -794,6 +797,7 @@ footer .bottom div {
     max-width: 100%;
     order: 1;
     margin-bottom: 48px;
+    padding: 0;
   }
   .about .inner .us .left {
     flex: 0 0 100%;
