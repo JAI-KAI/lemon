@@ -61,11 +61,11 @@ import SimpleParallax from "simple-parallax-js/vanilla";
         goTop.style.opacity = (this.scrollY) > productsTop ? 1 : 0
     })
     
-    //SimpleParallax
-    // var simpleParallax = document.getElementById('simpleParallax');
-    // new SimpleParallax(simpleParallax,{
-    //     scale: 1.1
-    // });
+    // SimpleParallax
+    var simpleParallax = document.getElementById('simpleParallax');
+    new SimpleParallax(simpleParallax,{
+        scale: 1.1
+    });
 
     //mobile
 
